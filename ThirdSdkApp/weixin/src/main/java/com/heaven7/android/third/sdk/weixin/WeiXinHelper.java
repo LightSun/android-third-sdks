@@ -30,7 +30,9 @@ public final class WeiXinHelper {
     public static WeiXinHelper get(Context context){
         return Creator.INSTANCE.initWXApi(context);
     }
-
+    public static WeiXinHelper get(){
+        return Creator.INSTANCE;
+    }
     private WeiXinHelper initWXApi(Context context){
         if(mWxApi == null){
             mWxApi = WXAPIFactory.createWXAPI(context.getApplicationContext(),
