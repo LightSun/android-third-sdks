@@ -35,13 +35,11 @@ public abstract class BaseWXEntryActivity extends Activity implements IWXAPIEven
         }
     }
 
-    // 微信发送请求到第三方应用时，会回调到该方法
     @Override
     public void onReq(BaseReq req) {
         finish();
     }
 
-    // 第三方应用发送到微信的请求处理后的响应结果，会回调到该方法
     @Override
     public void onResp(BaseResp response) {
         if(response instanceof SendAuth.Resp){
