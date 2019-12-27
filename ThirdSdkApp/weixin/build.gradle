@@ -2,13 +2,13 @@ apply plugin: 'com.android.library'
 apply from: "../common.gradle"
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -26,5 +26,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.5.6"
+
+    api "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.5.8"
 }
